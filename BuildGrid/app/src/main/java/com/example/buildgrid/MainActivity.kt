@@ -62,6 +62,19 @@ fun TopicGridItem(
                 modifier = Modifier.size(68.dp),
                 contentScale = ContentScale.Crop
             )
+
+            Column(
+                modifier= Modifier.padding(
+                    start = 16.dp,
+                    end=16.dp
+                )
+            ){
+                Text(
+                    text=stringResource(topic.name),
+                    modifier=Modifier.padding(top=16.dp),
+                    style= MaterialTheme.typography.bodyMedium
+                )
+            }
         }
     }
 }
