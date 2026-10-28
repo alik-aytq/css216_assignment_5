@@ -27,18 +27,18 @@ import com.example.buildgrid.ui.theme.BuildGridTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.ui.Alignment
 import androidx.compose.material3.Icon
+import androidx.compose.foundation.lazy.grid.items
 
 class MainActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContent{
             MaterialTheme{
-                TopicGridItem(
-                    topic= DataSource.topics[13],
-                    modifier=Modifier.padding(16.dp)
-                )
+                CoursesGrid()
             }
         }
     }
@@ -93,6 +93,17 @@ fun TopicGridItem(
 
                 }
             }
+        }
+    }
+}
+
+@Composable
+fun CoursesGrid(modifier: Modifier= Modifier){
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(2)
+    ){
+        items(DataSource.topics) {topic ->
+            TopicGridItem(topic = topic)
         }
     }
 }
