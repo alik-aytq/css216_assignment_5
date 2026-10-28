@@ -74,6 +74,18 @@ fun TopicGridItem(
                     modifier=Modifier.padding(top=16.dp),
                     style= MaterialTheme.typography.bodyMedium
                 )
+
+                Row(
+                    modifier=Modifier.padding(top = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        painter=painterResource(R.drawable.ic_grain),
+                        contentDescription = null,
+                        modifier=Modifier.size(16.dp)
+                    )
+
+                }
             }
         }
     }
