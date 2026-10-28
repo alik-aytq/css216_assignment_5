@@ -85,6 +85,12 @@ fun TopicGridItem(
                         modifier=Modifier.size(16.dp)
                     )
 
+                    Text(
+                        text=topic.numberOfCourses.toString(),
+                        modifier=Modifier.padding(start=8.dp),
+                        style=MaterialTheme.typography.labelMedium
+                    )
+
                 }
             }
         }
