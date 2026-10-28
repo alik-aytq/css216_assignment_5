@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContent{
-            BuildGridTheme{
+            MaterialTheme{
                 TopicGridItem(
                     topic= DataSource.topics[13],
                     modifier=Modifier.padding(16.dp)
@@ -52,7 +52,7 @@ fun TopicGridItem(
     Card(
         modifier=modifier,
         colors= CardDefaults.cardColors(
-            contentColor = MaterialTheme.colorScheme.secondaryContainer
+            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
         )
     ){
         Row {
